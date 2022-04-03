@@ -12,13 +12,13 @@ function Banner() {
 
                 <p className=" grid gap-2  grid-cols-1 md:grid-cols-3 lg:grid-cols-4 md:p-4"> 
                         <span className=" bg-white text-base text-center  text-black rounded-sm shadow border border-slate-200 p-4">
-                            20 years ago if someone asked you to <span className="text-orange-500">'GOOGLE'</span>  something, you would have thought that person was crazy because you would have never heard of that funny word.
+                            20 years ago if someone asked you to <span className="text-orange-500">GOOGLE</span>  something, you would have thought that person was crazy because you would have never heard of that funny word.
                         </span>
                         <span className="bg-white text-base text-center  text-black rounded-sm shadow border border-slate-200 p-4">
-                            15 years back if anyone told you the term <span className="text-orange-500">'WIRELESS FIDELITY'</span> or <span className="text-orange-500">'WiFi'</span>, you would have asked, <span className="text-orange-500">'what is that?'</span>
+                            15 years back if anyone told you the term <span className="text-orange-500">WIRELESS FIDELITY</span> or <span className="text-orange-500">WiFi</span>, you would have asked, <span className="text-orange-500">what is that?</span>
                         </span>
                         <span className="bg-white text-base text-center  text-black rounded-sm shadow border border-slate-200 p-4">
-                            10 years back if someone mentioned 'MEME', we bet you even pronounced it wrong.
+                            10 years back if someone mentioned MEME, we bet you even pronounced it wrong.
                         </span>
                         <span className="bg-white text-base text-center  text-black rounded-sm shadow border border-slate-200 p-4">
                             The very same way, the next term which soon will be used by everyone and will for sure cause a revolution is <span className="text-orange-500">DESIGN THINKING</span>.
