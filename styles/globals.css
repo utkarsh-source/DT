@@ -15,7 +15,8 @@
 @layer utilities {
 
   .gradient {
-    @apply bg-gradient-to-r from-amber-400 to-darkPink;
+    background: linear-gradient(82.95deg, #BF3240 -6.56%, #7E36D9 122.43%),
+    #FF5A43;
   }
   
   .light-gradient {

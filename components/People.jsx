@@ -18,7 +18,7 @@ const data = [
     id: 1,
     description:
             "A good idea is something that does not solve just one single problem, but rather can solve multiple problems at once",
-    avatar: Avatar1,
+    avatar: Avatar4,
     name: 'Shigeru Miyamoto',
     designation: '@Game designer at Nintendo',
   },
@@ -36,13 +36,13 @@ const data = [
       'Design thinking is a mindset, not a toolkit or a series of steps',
     avatar: Avatar3,
     name: 'Arne Van Oosterom',
-    designation: '@__________________',
+    designation: '@Creative facilitator and leadership coach',
   },
   {
     id: 4,
     description:
       'User-centred design means understanding what your users need, how they think, and how they behave and incorporating that understanding into every aspect of your process.',
-    avatar: Avatar4,
+    avatar: Avatar1,
     name: 'Jesse James Garrett',
     designation: '@User experience designer,',
   },

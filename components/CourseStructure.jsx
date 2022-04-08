@@ -41,15 +41,16 @@ function CourseStructure() {
       <section className="p-1  md:p-10 ">
          <h2 className="text-center  text-black text-xl md:text-3xl    mb-10 font-bold">Course Structure</h2>
 
-          <ul className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-6">
+          <ul className="flex flex-wrap justify-center space-x-4">
               {data.map(({ day, title, text, img}, index) => {
                   return (
-                      <li key={index} className="relative  min-w-[20rem] md:max-h-[12.01rem] flex flex-col md:flex-row md:box-shadow overflow-hidden rounded-lg border  border-slate-200">
-                          <figure className="w-full  md:max-w-[18rem]">
+                      <li key={index} className="mb-4 relative w-[20rem] flex flex-col md:box-shadow overflow-hidden rounded-lg border  border-slate-200">
+                          <figure className="w-full object-contain">
                               <Image src={img} alt={title}/>
                           </figure>
-                          <div className=" relative w-full h-full">
-                                <h1 className=" min-w-[10rem] w-full bg-blue-900 text-white font-bold p-4 py-2.5">{day} - {title}</h1>
+                                <span className='rounded-full py-1 inline-block bg-[#430f58] text-white text-sm font-bold m-2 my-3 w-max px-4'>{day}</span>
+                          <div className=" relative w-full ">
+                                <h1 className="w-max text-lg text-black rounded-full font-bold  px-4">{title}</h1>
                                 {text && <p className=" md:max-h-[10rem] overflow-y-auto bg-gray-100 md:bg-white text-base whitespace-pre-line text-slate-500 leading-relaxed p-4">{text}</p>}
                           </div>
                       </li>

@@ -2,7 +2,7 @@ import Slider from 'react-slick'
 import { useRef} from 'react'
 import { SETTINGS } from '../helpers/CarouselSettings';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
-import banner from '../assets/banner.jpg';
+import banner from '../assets/banner.png';
 import Image from 'next/image'
 
 function Banner() {
@@ -12,11 +12,11 @@ function Banner() {
 
 
   return (
-      <section className="relative w-full bg-[#430f58] p-4 md:p-8 h-max md:min-h-screen ">
+      <section className="bg-black relative w-full  p-4 md:p-8 h-max md:min-h-screen ">
           <div className="flex md:space-x-10 ">
                 <div className="flex-1 md:flex-[0.5] flex-col justify-center ">
                                 <h2 className="text-center md:text-left text-yellow-500 text-3xl md:text-5xl font-semibold  mb-5 md:mb-10">What is Design Thinking ?</h2>
-                                <p className="text-white text-justify  text-base md:text-3xl" ><strong className="text-yellow-500"><span className="text-yellow-500 text-xl md:text-5xl pr-0.5"> D</span></strong>esign Thinking is a creative solution-based approach to solving problems. It is an iterative process in which we seek to understand the user, challenge assumptions, redefine problems, and identify alternative strategies.
+                                <p className="text-white text-justify  text-base md:text-2xl" >Design Thinking is a creative solution-based approach to solving problems. It is an iterative process in which we seek to understand the user, challenge assumptions, redefine problems, and identify alternative strategies.
                         </p>
                 </div>
                 <figure className="md:block hidden flex-[0.5] object-cover">
