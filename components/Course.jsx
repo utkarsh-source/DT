@@ -47,18 +47,18 @@ const data = [
 function Course() {
   return (
       <section className="p-1 py-10 md:p-10">
-            <h2 className="text-center  text-black text-xl md:text-3xl  mb-10 font-bold">Who should take this  <span className="text-orange-600"> course </span> </h2>
+            <h2 className="text-center  text-black text-xl md:text-3xl  mb-10 font-bold">Who should take this  <span className="text-orange-700"> course </span> </h2>
 
             <ul className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 ">
               {data.map(({ title, text, img }, index) => {
                     
                     return (
-                        <li key={index} className="p-4 md:box-shadow bg-white rounded-md border border-slate-200">
-                            <figure className="rounded-full bg-gray-50 p-4 object-cover max-w-[8rem]">
-                                    <Image src={img } alt={title} />
-                            </figure>
-                            <div className="p-4">
-                                <h1 className="font-bold text-xl text-orange-500 mb-2 ">{title}</h1>
+                        <li key={index} className="overflow-hidden md:box-shadow bg-white rounded-xl border border-slate-200">
+                            <h1 className="bg-[#430f58] p-2 px-4 font-bold text-lg text-white mb-2 ">{title}</h1>
+                            <div className="p-2 px-4 flex items-center">
+                                <figure className="rounded-full mr-4 bg-gray-50 p-1.5 object-cover  max-w-[6rem]">
+                                        <Image src={img } alt={title} />
+                                </figure>
                                 <p className="fontbold text-slate-500 leading-relaxed ">{text}</p>
                             </div>
                         </li>

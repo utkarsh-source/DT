@@ -36,7 +36,7 @@ function CourseWork() {
                 {data.map(({ title, text, img}, index) => {
                     return (
                         <li key={index} className=" mb-5 w-full  md:max-w-[20rem] rounded-xl overflow-hidden border border-slate-100">
-                                <h1 className="font-bold text-slate-600 leading-relaxed p-4 py-2 bg-[#facf5a] ">{title}</h1>
+                                <h1 className="font-bold text-slate-600 leading-relaxed p-4 py-2 bg-white ">{title}</h1>
                             <div className="relative flex space-x-3 items-center w-full p-2">
                                     <figure className="max-w-[5rem] object-contain">
                                         <Image src={img} alt={title}/>
