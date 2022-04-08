@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
+import { FaAngleUp, FaAngleDown} from 'react-icons/fa'
+
 
 
 const data = [
@@ -51,14 +53,14 @@ function Faq() {
   return (
       <section className=" p-1 py-10 md:p-16">
           <h2 className="text-center underline underline-offset-4 text-black text-3xl mb-16 font-bold"> <span className="text-orange-600"> FAQs </span> </h2>
-          <ul className="flex flex-col space-y-5">
+          <ul className="flex flex-col ">
               {data.map(({ q, a }, index) => {
                   return (
-                      <React.Fragment key={index}>
-                          <li onClick={() => handleFaq(index)} className="flex justify-between font-bold bg-[#f6f6f6] text-slate-500 p-2 px-4 rounded-md">{q} <span className='inline-block text-3xl font-bold'>{faq[index] ? "-" : "+"}</span>
+                      <div className='mb-5' key={index}>
+                        <li onClick={() => handleFaq(index)} className={`${faq[index] ? "rounded-t-md" : "rounded-md" } relative flex items-center text-white justify-between font-bold bg-black p-4`}>{q} <span className='inline-block  font-bold'>{faq[index] ?<FaAngleUp  className="text-white"/> : <FaAngleDown className="text-white"/>}</span>
                           </li>
-                          {faq[index] && <span className="p-4 text-slate-700 text-lg leading-relaxed">{a}</span>}
-                      </React.Fragment>
+                          {faq[index] && <p className="rounded-b-md w-full blo p-4 border border-black text-slate-700 text-lg leading-relaxed">{a}</p>}
+                      </div> 
                   )
               })}
           </ul>

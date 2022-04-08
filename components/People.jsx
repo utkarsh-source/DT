@@ -1,10 +1,15 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import Image from 'next/image'
 import Avatar1 from '../assets/img1.jpg'
 import Avatar2 from '../assets/img2.jpg'
 import Avatar3 from '../assets/img3.jpeg'
 import Avatar4 from '../assets/img4.jpg'
 import Avatar5 from '../assets/img5.jpg'
+import Slider from 'react-slick'
+import { SETTINGS } from '../helpers/CarouselSettings'
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
+
+
 
 
 
@@ -21,7 +26,7 @@ const data = [
     id: 2,
     description:
       'Design thinking is a human centred approach to innovation that draws from the designer’s toolkit to integrate the needs of people, the possibilities of technology, and the requirements for business success.',
-    avatar: Avatar2,
+    avatar: Avatar5,
     name: 'Tim Brown',
     designation: '@ Chair of IDEO',
   },
@@ -45,7 +50,7 @@ const data = [
     id: 5,
     description:
       'Good design begins with honesty, asks tough questions, comes from collaboration and from trusting your intuition.',
-    avatar: Avatar5,
+    avatar: Avatar2,
     name: 'Freeman Thomas',
     designation: '@Automobile designer',
   },
@@ -53,13 +58,18 @@ const data = [
 
 function People() {
 
+
+  const sliderRef = useRef()
+
   return (
-      <section className="p-1 py-10 md:p-10">
-          <h2 className="text-center underline underline-offset-4 text-black text-3xl mb-16 font-bold">What successful people say about<span className="text-orange-600">  Design Thinking </span> </h2>
-          <ul className="flex flex-wrap md:space-x-5 justify-center">
-              {data.map((item, index) => {
-                  return (
-                      <li key={index} className="flex flex-col justify-between mb-5 p-6 box-shadow rounded-md max-w-[25rem] border border-slate-200 ">
+      <section className="relative w-full p-1 py-10 md:p-10">
+          <h2 className="text-center text-black text-xl md:text-3xl  mb-10 font-bold">What successful people say about<span className="text-orange-600">  Design Thinking </span> </h2>
+      <ul className="w-full h-max relative">
+        <Slider {...SETTINGS} ref={sliderRef}>
+            {data.map((item, index) => {
+              return (
+                    <div key={index} className="p-4"> 
+                      <li  className="min-h-[18rem] flex flex-col justify-between p-6 md:box-shadow rounded-md border border-slate-200 ">
                             <p className="pb-5 leading-relaxed text-base">{item.description}</p>
                             <div className="flex items-center">
                                 <figure className="rounded-full w-20 h-20 object-contain relative overflow-hidden">
@@ -71,8 +81,18 @@ function People() {
                                 </div>
                             </div>
                       </li>
+                  </div>
                   )
               })}
+        </Slider>
+                    <div className="justify-center  w-full  flex items-center space-x-2 mt-2">
+                        <button onClick={()=>sliderRef.current.slickPrev()} className="active:scale-95 box-shadow rounded-full p-3 bg-white ">
+                            <FaAngleLeft className="font-bold text-black text-2xl"/>
+                        </button>
+                        <button onClick={()=>sliderRef.current.slickNext()} className="active:scale-95 box-shadow rounded-full p-3 bg-white ">
+                            <FaAngleRight className="font-bold text-black text-2xl"/>
+                        </button>
+                    </div>
           </ul>
     </section>
   )

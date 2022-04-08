@@ -1,4 +1,5 @@
 import React from 'react'
+import {TiTick as Tick} from 'react-icons/ti' 
 
 
 const data = [
@@ -17,11 +18,11 @@ const data = [
 
 function Outcome() {
   return (
-      <section className="p-1 py-10 md:p-16 bg-[#f6f6f6]">
-          <h2 className="text-center underline underline-offset-4 text-black font-bold text-3xl mb-16">What are the <span className="text-orange-600"> outcomes</span>  of this course</h2>
-          <ul className=' flex flex-wrap justify-center '>
+      <section className="p-1 py-10 md:p-16 bg-gray-50">
+          <h2 className="text-center text-black font-bold text-xl md:text-3xl  mb-10">What are the <span className="text-orange-600"> outcomes</span>  of this course</h2>
+          <ul className=' flex flex-wrap space-x-1 justify-center '>
               {data.map((item, index) => {
-                  return <li key={index}  className=" w-full md:w-[25rem] md:max-w-[25rem] p-8  bg-white text-base text-center border border-slate-200  ">{item}</li>
+                  return <li key={index}  className="mb-1  rounded-md flex w-full md:w-[25rem] md:max-w-[25rem] p-8  bg-white leading-relaxed  text-slate-500 text-base text-justify border border-slate-200  "><Tick className='text-orange-600 min-w-[2rem]  mr-3 -mt-1 text-4xl'/> <span>{item}</span></li>
               })}
           </ul>
         </section>

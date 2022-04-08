@@ -1,8 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+
+
+.html{
+  font-family: 'Roboto Condensed',
+  sans-serif;
+}
 
 @layer utilities {
+
+  .gradient {
+    @apply bg-gradient-to-r from-amber-400 to-darkPink;
+  }
+  
+  .light-gradient {
+    @apply bg-gradient-to-r from-purple-800 to-purple-400;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-red-500 via-indigo-500 to-pink-500 bg-clip-text text-transparent;
+  }
+  
+  .box-shadow {
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.15);
+  }
+  
+  .line-color {
+    text-decoration-color: red;
+  }
+  
   .gridTemplate {
     grid-template-columns: repeat(4, 10vmin);
   }

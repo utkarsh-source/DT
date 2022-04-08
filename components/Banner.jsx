@@ -1,32 +1,61 @@
+import Slider from 'react-slick'
+import { useRef} from 'react'
+import { SETTINGS } from '../helpers/CarouselSettings';
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
+import banner from '../assets/banner.jpg';
+import Image from 'next/image'
 
 function Banner() {
-  return (
-    <section className="p-1 py-5 relative h-max md:min-h-screen bg-blue-900">
-            <div className="w-full relative md:px-10" >
-                    <div className="mb-8 md:mb-16">
-                            <h2 className="text-center underline underline-offset-4 text-white text-lg md:text-3xl lg:text-5xl lg:leading-normal mb-8 font-bold font-heading animated">What is  <span className="text-orange-600"> Design</span> Thinking</h2>
-                             <p className="text-white text-center text-base md:text-3xl  leading-relaxed" ><strong className="text-orange-500">Design</strong> Thinking is a creative solution-based approach to solving problems. It is an iterative process in which we seek to understand the user, challenge assumptions, redefine problems, and identify alternative strategies.
-                            </p>
-              </div>
-              <div>
 
-                <p className=" grid gap-2  grid-cols-1 md:grid-cols-3 lg:grid-cols-4 md:p-4"> 
-                        <span className=" bg-white text-base text-center  text-black rounded-sm shadow border border-slate-200 p-4">
-                            20 years ago if someone asked you to <span className="text-orange-500">GOOGLE</span>  something, you would have thought that person was crazy because you would have never heard of that funny word.
-                        </span>
-                        <span className="bg-white text-base text-center  text-black rounded-sm shadow border border-slate-200 p-4">
-                            15 years back if anyone told you the term <span className="text-orange-500">WIRELESS FIDELITY</span> or <span className="text-orange-500">WiFi</span>, you would have asked, <span className="text-orange-500">what is that?</span>
-                        </span>
-                        <span className="bg-white text-base text-center  text-black rounded-sm shadow border border-slate-200 p-4">
-                            10 years back if someone mentioned MEME, we bet you even pronounced it wrong.
-                        </span>
-                        <span className="bg-white text-base text-center  text-black rounded-sm shadow border border-slate-200 p-4">
-                            The very same way, the next term which soon will be used by everyone and will for sure cause a revolution is <span className="text-orange-500">DESIGN THINKING</span>.
-                        </span>
-                    </p>
-              </div>
+
+    const sliderRef = useRef();
+
+
+  return (
+      <section className="relative w-full bg-[#430f58] p-4 md:p-8 h-max md:min-h-screen ">
+          <div className="flex md:space-x-10 ">
+                <div className="flex-1 md:flex-[0.5] flex-col justify-center ">
+                                <h2 className="text-center md:text-left text-yellow-500 text-3xl md:text-5xl font-semibold  mb-5 md:mb-10">What is Design Thinking ?</h2>
+                                <p className="text-white text-justify  text-base md:text-3xl" ><strong className="text-yellow-500"><span className="text-yellow-500 text-xl md:text-5xl pr-0.5"> D</span></strong>esign Thinking is a creative solution-based approach to solving problems. It is an iterative process in which we seek to understand the user, challenge assumptions, redefine problems, and identify alternative strategies.
+                        </p>
+                </div>
+                <figure className="md:block hidden flex-[0.5] object-cover">
+                    <Image src={banner} alt="Design Thinking" />
+                </figure>         
+          </div>
+           <div className="mt-5 relative w-full">
+              <Slider {...SETTINGS} ref={sliderRef}>
+                        <div className="p-2 ">
+                            <p className="border-2 border-white rounded-lg text-xl text-center p-4 min-h-[10rem]  text-white  ">
+                                20 years ago if someone asked you to <strong className="text-yellow-500 px-1">GOOGLE</strong>  something, you would have thought that person was crazy because you would have never heard of that funny word.
+                            </p>
+                        </div>
+                        <div className="p-2">
+                                    <p className="border-2 border-white text-xl text-center p-4 min-h-[10rem]  text-white rounded-lg ">
+                                        15 years back if anyone told you the term <strong className="text-yellow-500 px-1">WIRELESS FIDELITY</strong> or <strong className="text-yellow-500 px-1">WiFi</strong>, you would have asked, <strong className="text-yellow-500 px-1">what is that?</strong>
+                            </p>
+                        </div>
+                        <div className="p-2">
+                                    <p className="border-2 border-white  text-xl text-center p-4 min-h-[10rem]  text-white rounded-lg ">
+                                        10 years back if someone mentioned MEME, we bet you even pronounced it wrong.
+                            </p>
+                        </div>
+                        <div className="p-2 ">
+                                    <p className="border-2 border-white  text-xl text-center p-4 min-h-[10rem]  text-white rounded-lg ">
+                                        The very same way, the next term which soon will be used by everyone and will for sure cause a revolution is <strong className="text-yellow-500 px-1">DESIGN THINKING</strong>.
+                            </p>
+                  </div>
+                    </Slider>
+                    <div className="justify-center  w-full  flex items-center space-x-2 md:mt-2">
+                        <button onClick={()=>sliderRef.current.slickPrev()} className="active:scale-95 box-shadow rounded-full p-3 bg-white ">
+                            <FaAngleLeft className="font-bold text-black text-2xl"/>
+                        </button>
+                        <button onClick={()=>sliderRef.current.slickNext()} className="active:scale-95 box-shadow rounded-full p-3 bg-white ">
+                            <FaAngleRight className="font-bold text-black text-2xl"/>
+                        </button>
                     </div>
-            </section>
+                </div>
+</section>
   )
 }
 
