@@ -7,6 +7,7 @@ import CourseHighlights from '../components/CourseHighlights'
 import CourseStructure from '../components/CourseStructure'
 import CourseWork from '../components/CourseWork'
 import Faq from '../components/Faq'
+import Learning from '../components/Learning'
 import Outcome from '../components/Outcome'
 import Participents from '../components/Participents'
 import People from '../components/People'
@@ -25,6 +26,7 @@ export default function Home() {
       <People/>
       <Outcome />
       <Course />
+      <Learning/>
       <CourseStructure />
       <CourseWork />
       <CourseHighlights />

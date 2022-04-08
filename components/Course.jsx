@@ -49,11 +49,11 @@ function Course() {
       <section className="p-1 py-10 md:p-10">
             <h2 className="text-center  text-black text-xl md:text-3xl  mb-10 font-bold">Who should take this  <span className="text-orange-700"> course </span> </h2>
 
-            <ul className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 ">
+            <ul className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
               {data.map(({ title, text, img }, index) => {
                     
                     return (
-                        <li key={index} className="overflow-hidden md:box-shadow bg-white rounded-xl border border-slate-200">
+                        <li key={index} className="overflow-hidden md:box-shadow bg-white rounded-xl border border-slate-300">
                             <h1 className="bg-[#430f58] p-2 px-4 font-bold text-lg text-white mb-2 ">{title}</h1>
                             <div className="p-2 px-4 flex items-center">
                                 <figure className="rounded-full mr-4 bg-gray-50 p-1.5 object-cover  max-w-[6rem]">

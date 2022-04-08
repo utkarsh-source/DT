@@ -13,25 +13,25 @@ import {BiUpArrowAlt} from 'react-icons/bi'
 
 const data = [
     {
-        img : Day0, day : "Day 1", title  :  "Live session with the facilitator" , text : "Learn how to take this course and why is it important"
+        img : Day0, day : "Day 0", title  :  "Live session with the facilitator" , text : "Learn how to take this course and why is it important"
     },
     {
-        img : Day1, day : "Day 2", title  :  "Fundamentals of DT" , text : "Learn how Design Thinking played a big role in human evolution and how to optimally use human potential \n Design challenge"
+        img : Day1, day : "Day 1", title  :  "Fundamentals of DT" , text : "Learn how Design Thinking played a big role in human evolution and how to optimally use human potential \n Design challenge"
     },
     {
-        img : Day2, day : "Day 3", title  :  "Empathy" , text : "Learn what empathy is and its overall impact. \n Case study - How American express bank saved the retail business owners in America during the 2010 recession\nEmpathy challenge"
+        img : Day2, day : "Day 2", title  :  "Empathy" , text : "Learn what empathy is and its overall impact. \n Case study - How American express bank saved the retail business owners in America during the 2010 recession\nEmpathy challenge"
     },
     {
-        img : Day3, day : "Day 4", title  :  "Problem statement & Ideation" , text : "Learn how to find the root cause and define the problem statements that gives directions to solve the problem \n Case study - How Mobisol was able to bring a revolutionary change in one of the world’s poorest countries by defining the right problem statement \nIdeation techniques\nCase study - How Google makes immense fortune by coming up with brand new ideas\nProblem statement challenge"
+        img : Day3, day : "Day 3", title  :  "Problem statement & Ideation" , text : "Learn how to find the root cause and define the problem statements that gives directions to solve the problem \n Case study - How Mobisol was able to bring a revolutionary change in one of the world’s poorest countries by defining the right problem statement \nIdeation techniques\nCase study - How Google makes immense fortune by coming up with brand new ideas\nProblem statement challenge"
     },
     {
-        img : Day4, day : "Day 5", title  :  "Prototyping & Testing" , text : "Importance of prototyping and testing and how it will help in minimising the mistakes\nCase study - How Uber managed to get massive user base since the time it was launched to till date by prototyping and testing their ideas\nDigitization\nTest your idea challenge"
+        img : Day4, day : "Day 4", title  :  "Prototyping & Testing" , text : "Importance of prototyping and testing and how it will help in minimising the mistakes\nCase study - How Uber managed to get massive user base since the time it was launched to till date by prototyping and testing their ideas\nDigitization\nTest your idea challenge"
     },
     {
-        img : Day5, day : "Day 6", title  :  "Bonus" , text : "See how Design Thinking works in action through Red bus success story\nGaming challenge\nFinal project"
+        img : Day5, day : "Day 5", title  :  "Bonus" , text : "See how Design Thinking works in action through Red bus success story\nGaming challenge\nFinal project"
     },
     {
-        img : Day6, day : "Day 7", title  :  "Graduation Day" , text : ""
+        img : Day6, day : "Day 6", title  :  "Graduation Day" , text : ""
     },
    
 
@@ -51,7 +51,7 @@ function CourseStructure() {
       <section className="p-1  md:p-10 ">
          <h2 className="text-center  text-black text-xl md:text-3xl    mb-10 font-bold">Course Structure</h2>
 
-          <ul className="flex flex-wrap justify-center md:space-x-4">
+          <ul className="flex flex-wrap justify-center md:space-x-7">
               {data.map(({ day, title, text, img}, index) => {
                   return (
                       <li key={index} className= "pb-8 mb-10 relative w-[20rem] flex flex-col md:box-shadow rounded-lg border  border-slate-200">
