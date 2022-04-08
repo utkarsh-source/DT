@@ -30,6 +30,9 @@
   .box-shadow {
     box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.15);
   }
+  .purple-shadow {
+    box-shadow: 0 0 2rem 0.08rem rgba(67,15,88, 0.2);
+  }
   
   .line-color {
     text-decoration-color: red;

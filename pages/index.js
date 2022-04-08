@@ -8,6 +8,7 @@ import CourseStructure from '../components/CourseStructure'
 import CourseWork from '../components/CourseWork'
 import Faq from '../components/Faq'
 import Outcome from '../components/Outcome'
+import Participents from '../components/Participents'
 import People from '../components/People'
 import WhyDt from '../components/WhyDt'
 
@@ -27,6 +28,7 @@ export default function Home() {
       <CourseStructure />
       <CourseWork />
       <CourseHighlights />
+      <Participents/>
       <CourseEnd />
       <Faq/>
     </div>

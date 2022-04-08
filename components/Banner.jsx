@@ -13,17 +13,22 @@ function Banner() {
 
   return (
       <section className="bg-black relative w-full  p-4 md:p-8 h-max md:min-h-screen ">
+          <div className="text-center flex flex-col space-y-3">
+                <h2 className='text-3xl  text-purple-500'>Talentio</h2>
+                <p className='font-bold text-white text-2xl '>Become a problem solver in 5 days with Design thinking!</p>
+              <p className='text-white'>(The most sought after skill in the world right now)</p>
+            </div>
           <div className="flex md:space-x-10 ">
-                <div className="flex-1 md:flex-[0.5] flex-col justify-center ">
-                                <h2 className="text-center md:text-left text-yellow-500 text-3xl md:text-5xl font-semibold  mb-5 md:mb-10">What is Design Thinking ?</h2>
-                                <p className="text-white text-justify  text-base md:text-2xl" >Design Thinking is a creative solution-based approach to solving problems. It is an iterative process in which we seek to understand the user, challenge assumptions, redefine problems, and identify alternative strategies.
-                        </p>
-                </div>
                 <figure className="md:block hidden flex-[0.5] object-cover">
                     <Image src={banner} alt="Design Thinking" />
                 </figure>         
+                <div className="flex items-center md:flex-[0.5]">
+                        <p className="px-5 h-max  text-white text-center  text-base md:text-xl" >Design Thinking is a creative solution-based approach to solving problems. It is an iterative process in which we seek to understand the user, challenge assumptions, redefine problems, and identify alternative strategies.
+
+                        </p>
+                </div>
           </div>
-           <div className="mt-5 relative w-full">
+           <div className="relative w-full">
               <Slider {...SETTINGS} ref={sliderRef}>
                         <div className="p-2 ">
                             <p className="border-2 border-white rounded-lg text-xl text-center p-4 min-h-[10rem]  text-white  ">
